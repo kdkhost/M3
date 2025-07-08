@@ -5,12 +5,19 @@
     "start_url": "/?utm_source=pwa",
     "scope": "/",
     "display": "standalone",
+    "display_override": ["standalone", "minimal-ui", "browser"],
     "orientation": "portrait",
     "background_color": "#2c3e50",
     "theme_color": "#3498db",
     "categories": ["business", "consulting", "technology"],
     "lang": "pt-BR",
-
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "installable_origins": [
+        "https://m3solucoeseservicos.com.br",
+        "https://www.m3solucoeseservicos.com.br"
+    ],
     "icons": [
         {
             "src": "icons/icon-72x72.webp",
@@ -74,13 +81,15 @@
             "src": "screenshots/screenshot1.webp",
             "sizes": "1080x1920",
             "type": "image/webp",
-            "form_factor": "narrow"
+            "form_factor": "narrow",
+            "label": "Página inicial do M3 Soluções"
         },
         {
             "src": "screenshots/screenshot2.webp",
             "sizes": "1920x1080",
             "type": "image/webp",
-            "form_factor": "wide"
+            "form_factor": "wide",
+            "label": "Nossos serviços"
         }
     ],
 
@@ -89,7 +98,7 @@
             "name": "Contato",
             "short_name": "Contato",
             "description": "Entre em contato conosco",
-            "url": "/contato",
+            "url": "/contato?source=pwa",
             "icons": [
                 {
                     "src": "icons/contact-icon-96x96.webp",
@@ -102,7 +111,7 @@
             "name": "Serviços",
             "short_name": "Serviços",
             "description": "Conheça nossos serviços",
-            "url": "/servicos",
+            "url": "/servicos?source=pwa",
             "icons": [
                 {
                     "src": "icons/services-icon-96x96.webp",
@@ -119,7 +128,13 @@
             "url": "https://m3solucoeseservicos.com.br/manifest.json"
         }
     ],
-
     "prefer_related_applications": false,
-    "iarc_rating_id": "e84b072d-71b3-4df3-b26d-da7b4ff2a731"
+
+    "iarc_rating_id": "e84b072d-71b3-4df3-b26d-da7b4ff2a731",
+    "protocol_handlers": [
+        {
+            "protocol": "web+m3",
+            "url": "/?url=%s"
+        }
+    ]
 }

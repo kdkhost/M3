@@ -219,6 +219,7 @@ $email = "contato@m3solucoeseservicos.com.br";
 
             .contact-option:hover {
                 background: #f5f5f5;
+                color:dodgerblue;
             }
 
             .contact-option i {
@@ -1775,17 +1776,15 @@ $email = "contato@m3solucoeseservicos.com.br";
                 // Elementos do popup
                 const pwaPopup = document.createElement('div');
                 pwaPopup.id = 'pwa-popup';
-                pwaPopup.innerHTML = `
-        <div class="pwa-popup-content">
-            <img src="images/logo.png" alt="Logo" class="pwa-logo">
-            <h3>Instalar nosso aplicativo</h3>
-            <p>Tenha acesso mais rápido e use mesmo offline! Instale nosso app diretamente na sua tela inicial.</p>
-            <div class="pwa-buttons">
-                <button id="pwa-install-btn" class="btn-install">Instalar Agora</button>
-                <button id="pwa-dismiss-btn" class="btn-dismiss">Mais tarde</button>
-            </div>
-        </div>
-    `;
+                pwaPopup.innerHTML = `<div class="pwa-popup-content">
+                                            <img src="images/logo/logo.png" alt="Logo" class="pwa-logo">
+                                            <h3>Instale nosso aplicativo!</h3>
+                                            <p>Tenha acesso mais rápido e use mesmo offline! Instale nosso app diretamente na sua tela inicial.</p>
+                                            <div class="pwa-buttons">
+                                                <button id="pwa-install-btn" class="btn-install">Instalar Agora</button>
+                                                <button id="pwa-dismiss-btn" class="btn-dismiss">Mais tarde</button>
+                                            </div>
+                                        </div>`;
                 document.body.appendChild(pwaPopup);
 
                 // Estilos para o popup (pode ser movido para CSS)
@@ -1812,8 +1811,8 @@ $email = "contato@m3solucoeseservicos.com.br";
             box-shadow: 0 5px 25px rgba(0,0,0,0.2);
         }
         .pwa-logo {
-            width: 80px;
-            height: 80px;
+            width: auto;
+            height: 40px;
             margin: 0 auto 15px;
             display: block;
         }
