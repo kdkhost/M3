@@ -1,40 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M3 Soluções - Offline</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    h1 {
-      color: #0066cc;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-    .icon {
-      font-size: 50px;
-      margin-bottom: 20px;
-      color: #0066cc;
-    }
-  </style>
-</head>
-<body>
-  <div class="icon">⚠️</div>
-  <h1>Você está offline</h1>
-  <p>No momento, não conseguimos conectar aos nossos servidores. Por favor, verifique sua conexão com a internet. Algumas funcionalidades podem estar disponíveis offline.</p>
-  <button onclick="window.location.reload()">Tentar novamente</button>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#1E2486">
+        <title>M3 Soluções - Modo Offline</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            :root {
+                --primary-color: #1E2486;
+                --secondary-color: #3498db;
+                --text-color: #333333;
+                --light-gray: #f8f9fa;
+                --dark-gray: #6c757d;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                text-align: center;
+                background-color: var(--light-gray);
+                color: var(--text-color);
+                margin: 0;
+                padding: 20px;
+                line-height: 1.6;
+            }
+
+            .offline-container {
+                background-color: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                padding: 40px 30px;
+                max-width: 600px;
+                width: 100%;
+            }
+
+            .logo {
+                width: 120px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                color: var(--primary-color);
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            p {
+                margin-bottom: 30px;
+                color: var(--dark-gray);
+                font-size: 16px;
+            }
+
+            .icon {
+                font-size: 60px;
+                margin-bottom: 25px;
+                color: var(--primary-color);
+            }
+
+            .btn {
+                background-color: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 6px;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .btn-outline {
+                background-color: transparent;
+                border: 2px solid var(--primary-color);
+                color: var(--primary-color);
+            }
+
+            .btn:hover {
+                background-color: #151b6b;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(30, 36, 134, 0.2);
+            }
+
+            .btn-outline:hover {
+                background-color: rgba(30, 36, 134, 0.05);
+            }
+
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .feature {
+                background-color: rgba(30, 36, 134, 0.08);
+                padding: 15px;
+                border-radius: 8px;
+                width: 140px;
+            }
+
+            .feature i {
+                color: var(--primary-color);
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .feature p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            @media (max-width: 480px) {
+                .offline-container {
+                    padding: 30px 20px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                .btn {
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="offline-container">
+            <!-- Substitua pelo caminho real do seu logo -->
+            <img src="images/logo/logo.png" alt="M3 Soluções" class="logo">
+            <div class="icon">
+                <i class="fas fa-wifi-slash"></i>
+            </div>
+            <h1>Você está offline no momento</h1>
+            <p>Parece que sua conexão com a internet está indisponível. Algumas funcionalidades podem estar limitadas, mas você ainda pode acessar conteúdos que já foram carregados anteriormente.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Informações salvas</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-alt"></i>
+                    <p>Documentos recentes</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <p>Histórico recente</p>
+                </div>
+            </div>
+
+            <button class="btn" onclick="window.location.reload()">
+                <i class="fas fa-sync-alt"></i> Tentar novamente
+            </button>
+            <a href="/" class="btn btn-outline">
+                <i class="fas fa-home"></i> Voltar ao início
+            </a>
+        </div>
+
+        <script>
+            // Verifica quando a conexão é restabelecida
+            function updateOnlineStatus() {
+                if (navigator.onLine) {
+                    window.location.reload();
+                }
+            }
+
+            // Monitora mudanças na conexão
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOnlineStatus);
+
+            // Tenta reconectar automaticamente a cada 30 segundos
+            setInterval(() => {
+                if (navigator.onLine) {
+                    window.location.reload();
+                }
+            }, 30000);
+        </script>
+    </body>
 </html>
