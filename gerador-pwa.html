@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerador de Ícones PWA</title>
+        <style>
+            :root {
+                --primary-color: #1E2486;
+                --secondary-color: #f8f8f8;
+                --accent-color: #4CAF50;
+                --text-color: #333;
+                --border-color: #ddd;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: var(--text-color);
+                background-color: var(--secondary-color);
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: var(--primary-color);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .upload-section {
+                text-align: center;
+                padding: 20px;
+                border: 2px dashed var(--border-color);
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+
+            .upload-btn {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+
+            .upload-btn:hover {
+                background-color: #151b6b;
+            }
+
+            #preview {
+                display: none;
+                margin-top: 15px;
+                max-width: 200px;
+                max-height: 200px;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .controls {
+                margin: 20px 0;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+            }
+
+            input, select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid var(--border-color);
+                border-radius: 6px;
+                font-size: 14px;
+            }
+
+            button {
+                display: inline-block;
+                background-color: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                margin-top: 20px;
+                cursor: pointer;
+                border-radius: 6px;
+                transition: background 0.3s ease;
+            }
+
+            button:hover {
+                background-color: var(--accent-color);
+            }
+
+            #results {
+                display: none;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .icon-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .icon-card {
+                padding: 10px;
+                background-color: #fff;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .icon-card img {
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Gerador de Ícones PWA</h1>
+            <div class="upload-section">
+                <p>Carregue uma imagem quadrada de alta resolução (mínimo 512x512px).</p>
+                <label class="upload-btn" for="imageInput">Carregar Imagem</label>
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                <img id="preview" alt="Pré-visualização">
+            </div>
+
+            <div class="controls">
+                <label for="format">Formato:</label>
+                <select id="format">
+                    <option value="webp">WebP</option>
+                    <option value="png">PNG</option>
+                    <option value="both">Ambos (WebP e PNG)</option>
+                </select>
+
+                <label for="quality">Qualidade (aplica-se apenas para WebP):</label>
+                <input type="number" id="quality" value="90" min="1" max="100" placeholder="1 a 100">
+
+                <label for="sizes">Tamanhos (separados por vírgula, ex: 72x72, 96x96):</label>
+                <input type="text" id="sizes" value="72x72,96x96,128x128,144x144,152x152,192x192,256x256,384x384,512x512">
+
+                <button id="generateBtn">Gerar Ícones</button>
+            </div>
+
+            <div id="results">
+                <h2>Ícones Gerados</h2>
+                <div class="icon-grid" id="iconGrid"></div>
+                <button id="downloadAll">Baixar Todos os Ícones (ZIP)</button>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <script>
+            const imageInput = document.getElementById('imageInput');
+            const preview = document.getElementById('preview');
+            const generateBtn = document.getElementById('generateBtn');
+            const results = document.getElementById('results');
+            const iconGrid = document.getElementById('iconGrid');
+            const downloadAllBtn = document.getElementById('downloadAll');
+            const formatSelect = document.getElementById('format');
+            const qualityInput = document.getElementById('quality');
+            const sizesInput = document.getElementById('sizes');
+
+            let originalImage = null;
+
+            imageInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        preview.src = event.target.result;
+                        preview.style.display = 'block';
+                        originalImage = new Image();
+                        originalImage.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            generateBtn.addEventListener('click', async () => {
+                if (!originalImage) {
+                    alert('Por favor, carregue uma imagem primeiro!');
+                    return;
+                }
+
+                const format = formatSelect.value;
+                const quality = parseInt(qualityInput.value) / 100 || 0.85;
+                const sizes = sizesInput.value.split(',').map(size => {
+                    const [width, height] = size.trim().split('x').map(Number);
+                    return {width, height};
+                });
+
+                iconGrid.innerHTML = '';
+                results.style.display = 'block';
+
+                const zip = new JSZip();
+                const folder = zip.folder("icons");
+
+                for (const size of sizes) {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = size.width;
+                    canvas.height = size.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(originalImage, 0, 0, size.width, size.height);
+
+                    if (format === 'webp' || format === 'both') {
+                        const webpBlob = await new Promise(resolve =>
+                            canvas.toBlob(resolve, 'image/webp', quality)
+                        );
+                        const webpURL = URL.createObjectURL(webpBlob);
+                        folder.file(`icon-${size.width}x${size.height}.webp`, webpBlob);
+                        addIconToUI(webpURL, `${size.width}x${size.height}.webp`);
+                    }
+
+                    if (format === 'png' || format === 'both') {
+                        const pngBlob = await new Promise(resolve =>
+                            canvas.toBlob(resolve, 'image/png')
+                        );
+                        const pngURL = URL.createObjectURL(pngBlob);
+                        folder.file(`icon-${size.width}x${size.height}.png`, pngBlob);
+                        addIconToUI(pngURL, `${size.width}x${size.height}.png`);
+                    }
+                }
+
+                downloadAllBtn.style.display = 'inline-block';
+                downloadAllBtn.onclick = () => {
+                    zip.generateAsync({type: "blob"}).then((content) => {
+                        saveAs(content, "pwa-icons.zip");
+                    });
+                };
+            });
+
+            function addIconToUI(blobURL, filename) {
+                const card = document.createElement('div');
+                card.className = 'icon-card';
+                card.innerHTML = `
+                    <img src="${blobURL}" alt="${filename}">
+                    <p>${filename}</p>
+                `;
+                iconGrid.appendChild(card);
+            }
+        </script>
+    </body>
+</html>
