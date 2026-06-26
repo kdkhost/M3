@@ -917,11 +917,16 @@ $menu_cor = "";
                 window.addEventListener('beforeinstallprompt', (e) => {
                     e.preventDefault();
                     deferredPrompt = e;
+                    console.log('beforeinstallprompt disparado!');
+
+                    // Limpar localStorage para teste (temporário)
+                    localStorage.removeItem('pwaDismissed');
 
                     // Mostrar popup após 5 segundos (ajustável)
                     setTimeout(() => {
                         if (deferredPrompt) {
                             pwaPopup.style.display = 'flex';
+                            console.log('Popup PWA exibido!');
                         }
                     }, 5000);
                 });
