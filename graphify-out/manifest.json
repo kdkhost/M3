@@ -1,0 +1,887 @@
+{
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\composer.json": {
+    "mtime": 1749761807.0,
+    "ast_hash": "e341848b454003c3d293b4911edc89aa",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\index.php": {
+    "mtime": 1777044839.0,
+    "ast_hash": "65b222d61b4f8f80c32ddd207b05ebad",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\inicio.php": {
+    "mtime": 1769191303.0,
+    "ast_hash": "10981af6d90c59e5c9ad9149e527c09e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\manifest.json": {
+    "mtime": 1756471087.0,
+    "ast_hash": "76e673421a8ab15cf7f31a3973046cd7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\send_email.php": {
+    "mtime": 1755783745.0,
+    "ast_hash": "ee922d54b55c4fb53a36000e56c6f741",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\sw.js": {
+    "mtime": 1756471556.0,
+    "ast_hash": "5803d16c3da411342812ca485174843a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\autoload.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "31da1f22a78d23c7353fe25086189fbb",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\autoload_classmap.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "5615b29a1f5688414d56a1515d954a91",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\autoload_namespaces.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "224007c97efb82c7b45b0e92f240af41",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\autoload_psr4.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "b60460195cc0ea0b64485f5834cd913d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\autoload_real.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "af42d8db86ceb017f122df8d406e39d9",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\autoload_static.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "81caec717a5375329aa7d63d4c465b89",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\ClassLoader.php": {
+    "mtime": 1696579912.0,
+    "ast_hash": "c02be6d96671f88d28aad3ffa134c8ae",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\installed.json": {
+    "mtime": 1749761807.0,
+    "ast_hash": "1a7d7fb1afd7388260a836e8ab66bdcc",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\installed.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "4082862c5a61170c28a422a1ac8857e7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\InstalledVersions.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "182d5924ff0b528f008a83d1f5809d02",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\composer\\platform_check.php": {
+    "mtime": 1749761807.0,
+    "ast_hash": "683691f5aac8ab2f356f141d16979d27",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\composer.json": {
+    "mtime": 1745507971.0,
+    "ast_hash": "185ce226e573a64e7680d3225ec10d27",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-af.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "7941a78d274605ae2e3caf320b78a687",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ar.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "b4b8bb573df63969ef6fc53c5c60a611",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-as.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "ce6a6156f7075c82d6b72c758c2c69b9",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-az.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "74f02d99fee297a3bcb83608f087769b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ba.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "b002912448dd2f25b5069daeb79bfb31",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-be.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "a34eaaa02c21ea4abfaba2ad9818f1c0",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-bg.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "9aa86adbd82a847efb273ac6efff2c64",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-bn.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "497c3fa69f460eb01e67df1a5105ea7b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ca.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "6a332f400db88a50dd4cd8fa8699b245",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-cs.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "fc4c9b063cda1814edfe6e0ad16c7d3b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-da.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "3a9b2e56c66994fe36e8852d01e19424",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-de.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "de470fc25bbaae789bb886bf539a6bc6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-el.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "db811be5a8de108dbb3f84a893a22052",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-eo.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "b05085bf17dc2350d4974c90c2927cc6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-es.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "51a0a6d5c0edbae734d18a05dae190c4",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-et.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "55cfa54c2c3e034b9e50b9199b68a0b9",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-fa.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "ee323ce1ce6547b45ff18d21754925c7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-fi.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "1577295b85a95ebc31e6d5548aa4d0d5",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-fo.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "0f4c3dd73b3dc53f116174886ca663a3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-fr.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "73301d4c8b9f104d3537788f1e5e5d0f",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-gl.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "0e5d759a67cc55ea905313bf5f9360e6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-he.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "cb25a67cf175aca511c9f0e0cbb6c915",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-hi.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "a60ac60dbfe6aae838dd378234f52be2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-hr.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "c7bf676ddc14d768c6be95c603dc4cbb",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-hu.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "781de42221ea82a8d04ebe4eae469ffe",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-hy.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "57c3d4308def6467eec54e9550316b3e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-id.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "c5e697c6e5f7ed417013ed30b3144453",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-it.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "15a1fdbd970fccac0f03765e5702a6c6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ja.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "47bc2e74a6a0de906e46fdc3f05335ad",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ka.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "693af2da3a7837d6c2ce877a6296c9fa",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ko.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "c95e8ca9669773f869b54ad91f2df771",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ku.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "ab9efa84143e00cb8e8dc2e06dae4796",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-lt.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "a1db8ce612b6a47aaa32635d66aa6147",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-lv.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "a9a3d00075ac3e83c74e43a394dfba54",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-mg.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "6c8fe8f190a0ccc9f750851ba0d65585",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-mn.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "48e3d73f30dd24026f7a16d0db90c016",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ms.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "b6f645dcc927bf4cc12f2db7b108be0c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-nb.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "d66dbb50c7f20ac69cfbf72e977c5257",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-nl.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "64ebeec65b9d7a508b1922bcf1c4f342",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-pl.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "5e151c1efa89f2ea68c78d6bbf25167a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-pt.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "7ab4f44038cbabb092989f624b230042",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-pt_br.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "6ad4b4cb098d6cbdb5f81141b7d021fd",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ro.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "5a7250cc3225f316ebd1d975e2d60a1d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ru.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "c30c69eae26b7eadccffd4796a225eac",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-si.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "60cfa4d8f675b15f975d11b5da77a44a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-sk.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "7614ab16cd7a50a85b34d910b0f5e466",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-sl.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "61da032ff1013433e51ff17a922644d3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-sr.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "de2480c0d69392481b31819faa367aa2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-sr_latn.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "8499f7e63ecd9855d165afe10b4b64a3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-sv.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "8cf5b8932ed804db48768075f1950e57",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-tl.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "ea1ce8d9353133c43fb3f14ad663454b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-tr.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "af90792796806d25cc4893d335b70fc1",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-uk.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "dd92241bba4087a70ce50c99ef16dd4a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-ur.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "017186f1054213e892d27ab5be64cc33",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-vi.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "b98d51c1f17b610fed45013e58bd1701",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-zh.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "05274f5c2fc2da491392f5b9e3f859e6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\language\\phpmailer.lang-zh_cn.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "fd539432a2254bb959d54a7010001574",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\DSNConfigurator.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "f60618b132442ddadb5d78cc3a26b473",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\Exception.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "31a957f1d74aaad734db3a781fe3de05",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\OAuth.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "0402ed8bb8bad3c9a283ecb0b91de127",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\OAuthTokenProvider.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "d62145b0e6665435d0b973a1e72d5cc5",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\PHPMailer.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "8cfed99438bfdb3bb45e019b9524269d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\POP3.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "3c84fb4d7a567b6b208677f94724c1dd",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\src\\SMTP.php": {
+    "mtime": 1745507971.0,
+    "ast_hash": "a346d51e4c8aeff3287d8c03c89e5c97",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\gerador-pwa.html": {
+    "mtime": 1752011043.0,
+    "ast_hash": "4e2e3b921521fa76b5f2f846638ba8de",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\offline.html": {
+    "mtime": 1756472310.0,
+    "ast_hash": "2cd9d3c93594bf4da261cd1500b7ef67",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\erro\\index.html": {
+    "mtime": 1756403312.0,
+    "ast_hash": "95571d1417cd4c29045a6cc6bfce563c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\README.md": {
+    "mtime": 1745507971.0,
+    "ast_hash": "92cca880d60cf7614f0c7af0e3a2e44c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\SECURITY.md": {
+    "mtime": 1745507971.0,
+    "ast_hash": "7a2ae8e920554464bb035fcdbbc69670",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\vendor\\phpmailer\\phpmailer\\SMTPUTF8.md": {
+    "mtime": 1745507971.0,
+    "ast_hash": "fead0765bba2285f2ebf67e41027059e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\1024x1024.png": {
+    "mtime": 1755558622.0,
+    "ast_hash": "4474ee42ca17eb63b740b8225e41897d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\128x128.png": {
+    "mtime": 1755358837.0,
+    "ast_hash": "6b35f421848bc22a30237bbf0e518522",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\144x144.png": {
+    "mtime": 1755358837.0,
+    "ast_hash": "09e75af7aba8003d8e26a7ebdbeca2b2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\152x152.png": {
+    "mtime": 1755358837.0,
+    "ast_hash": "11a3270d9cc72ad9455c982b587d3b55",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\192x192.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "d03c161a896c676000d688e495fe14f1",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\384x384.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "2f9bf6faf860aac84151490ac800b414",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\48x48.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "6d25dca8013289841af1b6d26de54deb",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\512x512.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "9b09a490f2d2b41eef4ebe655450261d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\72x72.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "578f1864528ac341f7dadf3fcd40091d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\96x96.png": {
+    "mtime": 1755358838.0,
+    "ast_hash": "ec35a5617d57c0bd677e80e90e0e4412",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\contact-icon-96x96.png": {
+    "mtime": 1755369867.0,
+    "ast_hash": "e84f03e26ff348890f024a2f2c03baa2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-128x128.webp": {
+    "mtime": 1782491279.9154541,
+    "ast_hash": "110c6483b7b98ba1266581e1d2f7f80c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-144x144.webp": {
+    "mtime": 1782491279.916958,
+    "ast_hash": "758c03c53fbe8cc1e79451a36797b455",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-152x152.webp": {
+    "mtime": 1782491279.9184666,
+    "ast_hash": "f8ceb0fe8362c0212fd145e1801b3b5c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-192x192.webp": {
+    "mtime": 1782491279.9204712,
+    "ast_hash": "766b0967a4e4d6b0ef408c5efed9bc10",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-256x256.webp": {
+    "mtime": 1782491279.9214802,
+    "ast_hash": "83b9054ce5fdb889b175e4474655d732",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-384x384.webp": {
+    "mtime": 1782491279.9245243,
+    "ast_hash": "9baa8d9762dce7953aacdf7416fb5142",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-512x512.webp": {
+    "mtime": 1782491279.9270372,
+    "ast_hash": "3c54dbf5b3560c894a7884a999ccb60c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-72x72.webp": {
+    "mtime": 1782491279.9290435,
+    "ast_hash": "d053484db435e7a4747ee28a6fcd4895",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\icon-96x96.webp": {
+    "mtime": 1782491279.9305465,
+    "ast_hash": "833d7465626641d2c0c19800edf1c709",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\icons\\services-icon-96x96.png": {
+    "mtime": 1755369867.0,
+    "ast_hash": "072d6939b1a62e51c13407fbdb1729c3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\contabilidade-otimizada-rj.png": {
+    "mtime": 1749769799.0,
+    "ast_hash": "dab9aaceffc957361ce8476db7334ee9",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\contabilidade-social-share.png": {
+    "mtime": 1749769803.0,
+    "ast_hash": "34843c6d25c324bb40df1b4d3ffa9625",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\11.png": {
+    "mtime": 1755353396.0,
+    "ast_hash": "a4e3d5ecf04fc696f6ea0e728a4f5fb4",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\12.png": {
+    "mtime": 1755353396.0,
+    "ast_hash": "0c38d556deca1289d098fe589c5bc3b9",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\13.png": {
+    "mtime": 1755353396.0,
+    "ast_hash": "b66269f03f3baf2b2165d78473b3dba0",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\2024-08-13.png": {
+    "mtime": 1750089280.0,
+    "ast_hash": "ec8f6e1b380ea692bfcdd6a8c7903ac7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\20250820_223031_0000.png": {
+    "mtime": 1755740114.0,
+    "ast_hash": "bbdc050077b319c35231c218cbd5d757",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\3.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "7312321da54afa09780163ad3557bcc0",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\4.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "b4f0594af70b7a6bb9db2cd0d50920d7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\5.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "62804cdf9d8ec3321607a434c01a860b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\6.png": {
+    "mtime": 1750090132.0,
+    "ast_hash": "0fffae5e2a81e694c4bbfb9d855cedc3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\7.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "4f6315bb3b0a56d0ad3f7f2e86862add",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\8.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "03d08ac618459248040ec3cd1a9488ea",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\9.png": {
+    "mtime": 1755353781.0,
+    "ast_hash": "954d7ee2cfe5ceff4f307033b1991b67",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\arandu-logo.svg": {
+    "mtime": 1750088489.0,
+    "ast_hash": "badf6ba057faa7424d0529ccd4b4c2b1",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\arlindo-cruz.png": {
+    "mtime": 1750089587.0,
+    "ast_hash": "da4888ee63d56652e613d1e6069dfd47",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\arlindocruz.png": {
+    "mtime": 1782491279.9576955,
+    "ast_hash": "da4888ee63d56652e613d1e6069dfd47",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\caritas.png": {
+    "mtime": 1750090534.0,
+    "ast_hash": "909a47763d8880603e608a04f049a72b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\dialeto-digital.png": {
+    "mtime": 1750090701.0,
+    "ast_hash": "e392224261cf271f580e9f83d95af559",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\eco.jpg": {
+    "mtime": 1752173165.0,
+    "ast_hash": "68de04bb0068061a67965b85783a6490",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\eletrofit.png": {
+    "mtime": 1750083028.0,
+    "ast_hash": "9fbef5b6240383d53b41c21cf8488dc3",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\instituto-gnosis-logo.png": {
+    "mtime": 1760492817.0,
+    "ast_hash": "9613e011a764929a732671c6bb5db05c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\instituto-lazaro.png": {
+    "mtime": 1750083023.0,
+    "ast_hash": "4bfef27508f169cd3fb33c9a6dfcd641",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\instituto-paulinho.png": {
+    "mtime": 1750083022.0,
+    "ast_hash": "a9c16261ac62e695c15eb78edf7da235",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\institutolazaro.png": {
+    "mtime": 1782491280.024947,
+    "ast_hash": "4bfef27508f169cd3fb33c9a6dfcd641",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\institutopaulinho.png": {
+    "mtime": 1782491280.0259502,
+    "ast_hash": "a9c16261ac62e695c15eb78edf7da235",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\iprosa.webp": {
+    "mtime": 1750083026.0,
+    "ast_hash": "b41545179bb48e692708ec4ffced497c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\ivjr-new-logo.png": {
+    "mtime": 1750083028.0,
+    "ast_hash": "f3c0e8db31d22c4e11e53007cf968e64",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\logoalvo.svg": {
+    "mtime": 1750083022.0,
+    "ast_hash": "dfe689f142c23aa2952bbf9acf0477f7",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\recebida_no_zap.jpg": {
+    "mtime": 1782491280.0425026,
+    "ast_hash": "30b5e9adea5f2f0f5159215d8b4c42bb",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\rio-educacao.png": {
+    "mtime": 1755354035.0,
+    "ast_hash": "e07fb88a16546f5d1fd370381e3d2f8e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\sem_nome.png": {
+    "mtime": 1782491280.0455363,
+    "ast_hash": "b77f52e1b6ab4ccc3f3bce05d09dfb6a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\VR.png": {
+    "mtime": 1782491279.949116,
+    "ast_hash": "cc5db2edb4bf850143aa03bc24ed97f5",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\clientes\\VR\u3164.png": {
+    "mtime": 1750083022.0,
+    "ast_hash": "cc5db2edb4bf850143aa03bc24ed97f5",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\favicon\\favicon.png": {
+    "mtime": 1749770090.0,
+    "ast_hash": "3f0d3695d207f265719277c3e1e3f213",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\favicon\\favicon.webp": {
+    "mtime": 1752012502.0,
+    "ast_hash": "f81e91899273a13bfa68a27ab2d9c853",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\hero\\fundobanner.png": {
+    "mtime": 1749765655.0,
+    "ast_hash": "d07f4d1f80957720f7b3d57ff5c5cbfb",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\hero\\hero.png": {
+    "mtime": 1750094137.0,
+    "ast_hash": "008eb28130a0a227b56bbd06d5cd5622",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\logo\\logo.png": {
+    "mtime": 1750132139.0,
+    "ast_hash": "75fa921ed4549344ca050b0332838a5e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\AnalisesFinanceiras.png": {
+    "mtime": 1755308252.0,
+    "ast_hash": "2714c73180797ccd7c3de41554a45069",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\AssessoriaAdministrativa.png": {
+    "mtime": 1755308252.0,
+    "ast_hash": "547259b3b965c16e6dcb1a876d5f15a2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\AssessoriaContabil.png": {
+    "mtime": 1755308508.0,
+    "ast_hash": "b2f9371ca9c2afb678f821a49ce17e12",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\BPO-Financeiro.png": {
+    "mtime": 1755196999.0,
+    "ast_hash": "a97c423001074b99fb56065abfcd24e6",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\ConsultoriaContabil.png": {
+    "mtime": 1755259772.0,
+    "ast_hash": "377493135980e247651ea0087d79cf55",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\Coworking.png": {
+    "mtime": 1769192221.0,
+    "ast_hash": "8e0ccb69920a82b23b6c7a181dc12d23",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\DepartamentoPessoal.png": {
+    "mtime": 1755260202.0,
+    "ast_hash": "7e74e8998c78b172fea46fe788f0d2bd",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\EmissaodeNotaFiscal.png": {
+    "mtime": 1755259333.0,
+    "ast_hash": "ed780610240584af4219ed7fad758a4c",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\GestaoContabilEmpresarial.png": {
+    "mtime": 1755260066.0,
+    "ast_hash": "3e67ac0daf9a2084c840f7697f7f615a",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\imposto-de-renda.png": {
+    "mtime": 1755198171.0,
+    "ast_hash": "d73ab738626714f191af400f78526f39",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\intermediacao_negocio.png": {
+    "mtime": 1755196297.0,
+    "ast_hash": "75c2c954b882ff0890a9748595deddd2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\Legalizacao-de-Organizacoes-Religiosas.png": {
+    "mtime": 1755198803.0,
+    "ast_hash": "b47bea7c0b9b5a2f37e9a79f4c528e78",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\legalizacao-empresa.png": {
+    "mtime": 1755196302.0,
+    "ast_hash": "8498a2e55cbb409566bae1bedc8ca6e8",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\mei.png": {
+    "mtime": 1755199363.0,
+    "ast_hash": "1b4736f31b30d95d04a40882c2815e3e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\PrestacaodeContas.png": {
+    "mtime": 1755259334.0,
+    "ast_hash": "b72f26d8693f99744dd05b0953265a0e",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\salic.png": {
+    "mtime": 1766246010.0,
+    "ast_hash": "f3d6872ba53fe7f6d6fffdc9d4a3c776",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\terceiro-setor.png": {
+    "mtime": 1755196560.0,
+    "ast_hash": "f6a2e3d2bd7213c772c5dd354a252f95",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\servicos\\transferegov.png": {
+    "mtime": 1766246010.0,
+    "ast_hash": "71cbefee00523c837b8104c3bfd39094",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\images\\sobrenos\\inicial.png": {
+    "mtime": 1755311075.0,
+    "ast_hash": "09d26f3525cec736ba9102f083311f5f",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\screenshots\\screenshot1.png": {
+    "mtime": 1755365743.0,
+    "ast_hash": "1e9e7909754a6547184ed73cc06afd62",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\screenshots\\screenshot2.png": {
+    "mtime": 1755365743.0,
+    "ast_hash": "f51a04d4f5583a934215308a7783a149",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\ipadpro11_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "2516fe9f2ef1c92a99e4e90c5e6caf1d",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\ipadpro12_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "c33efa3c0b8ecae28dd5c397369856c4",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\ipad_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "e623c5a117010adaa1c7e69a9906081b",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\iphone5_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "2125c76526d049f93beb23ba058c56a2",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\iphone6plus_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "849a54cdfc5e18fab19e59b9d5418735",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\iphone6_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "4fb56bd1c580e0288f73a05eba847346",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\iphonexsmax_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "cc4296bb974a3a68fca05c0b98ddbd75",
+    "semantic_hash": ""
+  },
+  "G:\\Tudo\\MEU-SISTEMA\\M3 ANTIGO\\M3\\splashscreens\\iphonex_splash.png": {
+    "mtime": 1755364788.0,
+    "ast_hash": "a383f09c307368820e5dcf5595b76dc0",
+    "semantic_hash": ""
+  }
+}
