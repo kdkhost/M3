@@ -212,7 +212,7 @@ $menu_cor = "";
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="container">
-                <h1>Soluções Contábeis Completas para seu Negócio</h1>
+                <h1>Soluções Financeiras, Contábeis e Projetos para seu negócio.</h1>
                 <p>A M3 Soluções e Serviços oferece os melhores serviços contábeis, fiscais e consultoria especializada para garantir a saúde financeira e compliance da sua empresa.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn">Fale Conosco</a>
