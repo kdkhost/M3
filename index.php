@@ -459,19 +459,14 @@ $menu_cor = "";
                     }
                     
                     if (!empty($clientesLogos)) {
-                        // Primeira iteração
-                        foreach ($clientesLogos as $index => $logo) {
-                            $altText = 'Logo Cliente ' . ($index + 1);
-                            echo '<div class="logo-item">';
-                            echo '<img src="' . htmlspecialchars($logo) . '" alt="' . htmlspecialchars($altText) . '">';
-                            echo '</div>';
-                        }
-                        // Segunda iteração para efeito infinito
-                        foreach ($clientesLogos as $index => $logo) {
-                            $altText = 'Logo Cliente ' . ($index + 1);
-                            echo '<div class="logo-item">';
-                            echo '<img src="' . htmlspecialchars($logo) . '" alt="' . htmlspecialchars($altText) . '">';
-                            echo '</div>';
+                        // Repetir os logos 3 vezes para garantir rolagem contínua
+                        for ($i = 0; $i < 3; $i++) {
+                            foreach ($clientesLogos as $index => $logo) {
+                                $altText = 'Logo Cliente ' . ($index + 1);
+                                echo '<div class="logo-item">';
+                                echo '<img src="' . htmlspecialchars($logo) . '" alt="' . htmlspecialchars($altText) . '">';
+                                echo '</div>';
+                            }
                         }
                     } else {
                         echo '<p class="no-logos">Estamos Ajustando nosso Sistema para Divulgação de nossos Clientes</p>';

@@ -1038,13 +1038,14 @@
                 width: 100%;
                 position: relative;
                 margin: 30px auto;
+                overflow: hidden;
             }
 
             .logos-track {
                 display: flex;
                 align-items: center;
                 width: max-content;
-                animation: scroll 40s linear infinite;
+                animation: scroll 60s linear infinite;
                 will-change: transform;
             }
 
