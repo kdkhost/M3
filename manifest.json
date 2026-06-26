@@ -2,92 +2,108 @@
     "name": "M3 Soluções e Serviços",
     "short_name": "M3 Soluções",
     "description": "Soluções Integradas para seu Negócio - Consultoria, implementação e suporte técnico especializado",
+
     "start_url": "/?utm_source=pwa",
     "scope": "/",
+
     "display": "standalone",
-    "display_override": ["standalone", "minimal-ui", "browser"],
+    "display_override": [
+        "standalone",
+        "minimal-ui",
+        "browser"
+    ],
+
     "orientation": "portrait",
-    "background_color": "#2c3e50",
-    "theme_color": "#3498db",
-    "categories": ["business", "consulting", "technology"],
+    "background_color": "#01124a",
+    "theme_color": "#01124a",
+
+    "categories": [
+        "business",
+        "consulting",
+        "technology"
+    ],
+
     "lang": "pt-BR",
+
     "edge_side_panel": {
         "preferred_width": 400
     },
-    "installable_origins": [
-        "https://m3solucoeseservicos.com.br",
-        "https://www.m3solucoeseservicos.com.br"
-    ],
+
     "icons": [
         {
-            "src": "icons/icon-72x72.webp",
+            "src": "icons/72x72.png",
             "sizes": "72x72",
-            "type": "image/webp",
+            "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "icons/icon-96x96.webp",
+            "src": "icons/96x96.png",
             "sizes": "96x96",
-            "type": "image/webp"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-128x128.webp",
+            "src": "icons/128x128.png",
             "sizes": "128x128",
-            "type": "image/webp"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-144x144.webp",
+            "src": "icons/144x144.png",
             "sizes": "144x144",
-            "type": "image/webp"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-152x152.webp",
+            "src": "icons/152x152.png",
             "sizes": "152x152",
-            "type": "image/webp",
-            "purpose": "maskable"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-192x192.webp",
+            "src": "icons/192x192.png",
             "sizes": "192x192",
-            "type": "image/webp",
-            "purpose": "maskable"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-256x256.webp",
+            "src": "icons/256x256.png",
             "sizes": "256x256",
-            "type": "image/webp"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-384x384.webp",
+            "src": "icons/384x384.png",
             "sizes": "384x384",
-            "type": "image/webp"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "icons/icon-512x512.webp",
-            "sizes": "512x512",
-            "type": "image/webp",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "icons/icon-512x512.png",
+            "src": "icons/512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "fallback"
+            "purpose": "any"
+        },
+        {
+            "src": "icons/1024x1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
 
     "screenshots": [
         {
-            "src": "screenshots/screenshot1.webp",
+            "src": "screenshots/screenshot1.png",
             "sizes": "1080x1920",
-            "type": "image/webp",
+            "type": "image/png",
             "form_factor": "narrow",
             "label": "Página inicial do M3 Soluções"
         },
         {
-            "src": "screenshots/screenshot2.webp",
+            "src": "screenshots/screenshot2.png",
             "sizes": "1920x1080",
-            "type": "image/webp",
+            "type": "image/png",
             "form_factor": "wide",
             "label": "Nossos serviços"
         }
@@ -97,13 +113,13 @@
         {
             "name": "Contato",
             "short_name": "Contato",
-            "description": "Entre em contato conosco",
-            "url": "/contato?source=pwa",
+            "description": "Chame no WhatsApp",
+            "url": "https://www.m3solucoeseservicos.com.br/#contact?source=pwa",
             "icons": [
                 {
-                    "src": "icons/contact-icon-96x96.webp",
+                    "src": "icons/contact-icon-96x96.png",
                     "sizes": "96x96",
-                    "type": "image/webp"
+                    "type": "image/png"
                 }
             ]
         },
@@ -111,26 +127,19 @@
             "name": "Serviços",
             "short_name": "Serviços",
             "description": "Conheça nossos serviços",
-            "url": "/servicos?source=pwa",
+            "url": "https://www.m3solucoeseservicos.com.br/#services?source=pwa",
             "icons": [
                 {
-                    "src": "icons/services-icon-96x96.webp",
+                    "src": "icons/services-icon-96x96.png",
                     "sizes": "96x96",
-                    "type": "image/webp"
+                    "type": "image/png"
                 }
             ]
         }
     ],
 
-    "related_applications": [
-        {
-            "platform": "webapp",
-            "url": "https://m3solucoeseservicos.com.br/manifest.json"
-        }
-    ],
     "prefer_related_applications": false,
 
-    "iarc_rating_id": "e84b072d-71b3-4df3-b26d-da7b4ff2a731",
     "protocol_handlers": [
         {
             "protocol": "web+m3",

@@ -1,19 +1,33 @@
 <?php
+// FILTRO DE SAÍDA - REMOVE WARNINGS DA PÁGINA FINAL
+ob_start(function($buffer) {
+    // Remove qualquer linha que contenha warning do ImageMagick
+    $lines = explode("\n", $buffer);
+    $filtered_lines = [];
+    
+    foreach ($lines as $line) {
+        // Pular linhas que contêm warnings do ImageMagick
+        if (strpos($line, 'Warning:') === false && 
+            strpos($line, 'Imagick') === false && 
+            strpos($line, 'ImageMagick') === false &&
+            strpos($line, 'version warning') === false) {
+            $filtered_lines[] = $line;
+        }
+    }
+    
+    return implode("\n", $filtered_lines);
+});
+
+error_reporting(0);
+ini_set('display_errors', 0);
+
 $chave = "6Le2B2MrAAAAAGibQeOs9ijTnBAljxxeHK7hlhGw";
-
-$instagram = "https://www.instagram.com/m3solucoeseservicos.contabeis";
-$facebook = "https://www.facebook.com/profile.php?id=61578261800648";
-$linkdin = "";
-
-// BOTAO FLUTUANTE DO RODAPE
+$instagram = "https://www.instagram.com/m3solucoeseservicos";
+$facebook = "https://www.facebook.com/m3solucoeseservicos";
+$linkdin = "https://br.linkedin.com/company/m3solucoeseservicos";
 $telefone = "552134395493";
 $whatsapp = "5521993081798";
 $email = "contato@m3solucoeseservicos.com.br";
-
-$rodape_cor = "#01124a";
-$slider_cor = "";
-$menu_cor = "";
-
 ?>
 
 <!DOCTYPE html>
@@ -25,15 +39,12 @@ $menu_cor = "";
         <!-- Primary Meta Tags -->
         <title>M3 Soluções Contábeis | Consultoria Financeira e Gestão Fiscal no Rio de Janeiro</title>
         <meta name="description" content="Soluções contábeis completas para sua empresa no RJ. Reduza impostos, regularize sua empresa e tenha gestão financeira eficiente. Atendimento personalizado para MEI, PMEs e grandes empresas.">
-        <meta name="keywords" content="contabilidade RJ, consultoria contábil, assessoria fiscal, gestão financeira, BPO financeiro, legalização de empresas, departamento pessoal, imposto de renda, MEI contábil, terceiro setor contábil">
+        <meta name="keywords" content="contabilidade RJ, consultoria contábil, assessoria fiscal, gestão financeira, BPO financeiro, legalização de empresas, departamento pessoal, imposto de renda, MEI contábil, terceiro setor contábil, coworking">
 
         <!-- Google / Search Engine Tags -->
         <meta itemprop="name" content="M3 Soluções Contábeis | Consultoria Financeira e Gestão Fiscal no Rio de Janeiro">
         <meta itemprop="description" content="Soluções contábeis completas para sua empresa no RJ. Reduza impostos, regularize sua empresa e tenha gestão financeira eficiente. Atendimento personalizado para MEI, PMEs e grandes empresas.">
         <meta itemprop="image" content="https://m3solucoeseservicos.com.br/images/contabilidade-otimizada-rj.png">
-        
-        <!-- Ícone de instalação iOS -->
-        <link rel="apple-touch-icon" href="/icons/192x192.png">
 
         <!-- iPhone SE (1ª Geração) / iPhone 5 -->
         <link rel="apple-touch-startup-image" href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
@@ -61,20 +72,21 @@ $menu_cor = "";
         <link rel="apple-touch-startup-image" href="splashscreens/ipadpro12_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)">
 
         <!-- PWA Meta Tags -->
-        <meta name="theme-color" content="#01124a">
+        <meta name="theme-color" content="#1a3ca8">
 
         <!-- Cor da barra de endereço Samsung Internet -->
         <meta name="theme-color" content="#1a3ca8" media="(prefers-color-scheme: light)">
-        <meta name="theme-color" content="#01124a" media="(prefers-color-scheme: dark)">
+        <meta name="theme-color" content="#151b6b" media="(prefers-color-scheme: dark)">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-title" content="M3 Soluções e Serviços">
+        <meta name="apple-mobile-web-app-title" content="M3 Contabilidade">
+        <link rel="apple-touch-icon" href="icons/icon-152x152.webp">
         <link rel="apple-touch-startup-image" href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
         <!-- Adicione outros tamanhos de splash screen -->
 
         <!-- Manifest -->
-        <!--<link rel="manifest" href="manifest.json">-->
+        <link rel="manifest" href="manifest.json">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -151,15 +163,1114 @@ $menu_cor = "";
         <!-- SweetAlert2 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/custom.css">
+
         <!-- reCAPTCHA v3 -->
         <script src="https://www.google.com/recaptcha/api.js?render=<?= $chave; ?>"></script>
 
         <!-- Font Awesome CDN -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/custom.css">
-        
+        <style>
+
+            /* Cabeçalho do menu de contatos */
+            .contact-header {
+                padding: 12px 15px;
+                background-color: #274b68;
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 18px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            /* Ajuste para o menu de contatos */
+            .contact-options {
+                padding-top: 0; /* Remove padding top para o cabeçalho ficar colado */
+                overflow: hidden; /* Mantém o border-radius do cabeçalho */
+            }
+
+            /* Botão Flutuante */
+            .floating-contact {
+                position: fixed;
+                bottom: 110px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            .floating-btn {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #25D366;
+                color: white;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                position: relative;
+                animation: pulse 2s infinite;
+            }
+
+            .floating-btn:hover {
+                background-color: #128C7E;
+                transform: scale(1.1);
+                animation: none; /* Remove a animação ao interagir */
+            }
+
+            /* Animação de pulsação */
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                }
+            }
+
+            .contact-options {
+                position: absolute;
+                bottom: 70px;
+                right: 0;
+                width: 160px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.58);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+            }
+
+            .contact-options.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .contact-option {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+                color: #333;
+                text-decoration: none;
+                transition: background 0.2s;
+            }
+
+            .contact-option:hover {
+                background: #f5f5f5;
+                color:dodgerblue;
+            }
+
+            .contact-option i {
+                margin-right: 8px;
+                width: 20px;
+                text-align: center;
+            }
+
+            .contact-option.whatsapp {
+                /*                color: #25D366;*/
+            }
+
+            /* Responsivo */
+            @media (max-width: 768px) {
+                .floating-btn {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 20px;
+                }
+
+                .contact-options {
+                    width: 140px;
+                    bottom: 60px;
+                }
+            }
+        </style>
+
+        <style>
+            :root {
+                --primary-color: #2c3e50;
+                --secondary-color: #3498db;
+                --accent-color: #e74c3c;
+                --light-color: #ecf0f1;
+                --dark-color: #2c3e50;
+                --text-color: #333;
+                --text-light: #7f8c8d;
+                --white: #fff;
+                --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                --transition: all 0.3s ease;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                color: var(--text-color);
+                line-height: 1.6;
+                overflow-x: hidden;
+                background-color: #f9f9f9;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--primary-color);
+                transition: var(--transition);
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 10px 25px;
+                background-color: var(--secondary-color);
+                color: var(--white);
+                border-radius: 5px;
+                font-weight: 500;
+                transition: var(--transition);
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: #2980b9;
+                transform: translateY(-3px);
+                box-shadow: var(--box-shadow);
+            }
+
+            .btn-accent {
+                background-color: var(--accent-color);
+            }
+
+            .btn-accent:hover {
+                background-color: #c0392b;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-bottom: 50px;
+                font-size: 2.5rem;
+                color: var(--primary-color);
+                position: relative;
+            }
+
+            .section-title:after {
+                content: '';
+                display: block;
+                width: 80px;
+                height: 4px;
+                background-color: var(--secondary-color);
+                margin: 15px auto;
+            }
+
+            /* Header */
+            header {
+                background-color: var(--white);
+                box-shadow: var(--box-shadow);
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                transition: var(--transition);
+            }
+
+            .header-scrolled {
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+            }
+
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: var(--primary-color);
+            }
+
+            .logo span {
+                color: var(--secondary-color);
+            }
+
+            .logo img {
+                max-height: 50px;
+            }
+
+            .nav-menu {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin-left: 30px;
+            }
+
+            .nav-menu a {
+                font-weight: 500;
+                position: relative;
+            }
+
+            .nav-menu a:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--secondary-color);
+                transition: var(--transition);
+            }
+
+            .nav-menu a:hover:after {
+                width: 100%;
+            }
+
+            .hamburger {
+                display: none;
+                cursor: pointer;
+                font-size: 1.5rem;
+                color: var(--primary-color);
+            }
+
+            /* Mobile Menu */
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 1100;
+                transition: var(--transition);
+                overflow-y: auto;
+                padding: 20px;
+            }
+
+            .mobile-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .mobile-menu-logo {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--primary-color);
+            }
+
+            .mobile-menu-logo img {
+                max-height: 30px;
+            }
+
+            .close-menu {
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--accent-color);
+            }
+
+            .mobile-nav-menu li {
+                margin-bottom: 15px;
+            }
+
+            .mobile-nav-menu a {
+                display: block;
+                padding: 10px;
+                font-weight: 500;
+                border-radius: 5px;
+            }
+
+            .mobile-nav-menu a:hover {
+                background-color: var(--light-color);
+            }
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1050;
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* Hero Section */
+            .hero {
+                background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('/images/hero/hero.png') no-repeat center center/cover;
+                color: var(--white);
+                padding: 180px 0 100px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                max-width: 700px;
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            /* About Section */
+            .about {
+                background-color: var(--white);
+            }
+
+            .about-content {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .about-text {
+                flex: 1;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: var(--primary-color);
+            }
+
+            .about-text p {
+                margin-bottom: 15px;
+            }
+
+            .about-image {
+                flex: 1;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--box-shadow);
+            }
+
+            /* Services Section - Cards Padronizados */
+            .services {
+                background-color: var(--light-color);
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 30px;
+                align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+            }
+
+            .service-card {
+                background-color: var(--white);
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: var(--box-shadow);
+                transition: var(--transition);
+                display: flex;
+                flex-direction: column;
+                height: 100%; /* Garante que todos os cards tenham 100% da altura da linha */
+            }
+
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .service-image {
+                height: 200px;
+                overflow: hidden;
+                flex-shrink: 0; /* Impede que a imagem redimensione */
+            }
+
+            .service-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition);
+            }
+
+            .service-card:hover .service-image img {
+                transform: scale(1.1);
+            }
+
+            .service-content {
+                padding: 20px;
+                flex: 1; /* Ocupa todo o espaço disponível */
+                display: flex;
+                flex-direction: column;
+            }
+
+            .service-content h3 {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+                color: var(--primary-color);
+                line-height: 1.3;
+                min-height: 60px; /* Altura fixa para os títulos */
+                display: flex;
+                align-items: center;
+            }
+
+            .service-content p {
+                flex: 1; /* O parágrafo ocupa o espaço restante */
+                margin-bottom: 0;
+                line-height: 1.5;
+                color: var(--text-light);
+            }
+
+            /* Contact Section */
+            .contact {
+                background-color: var(--white);
+            }
+
+            .contact-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 50px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: var(--primary-color);
+            }
+
+            .contact-info p {
+                margin-bottom: 30px;
+            }
+
+            .contact-details {
+                margin-bottom: 30px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .contact-item i {
+                width: 40px;
+                height: 40px;
+                background-color: var(--light-color);
+                color: var(--secondary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+            }
+
+            .contact-form .form-group {
+                margin-bottom: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-family: 'Poppins', sans-serif;
+                transition: var(--transition);
+            }
+
+            .contact-form input:focus,
+            .contact-form textarea:focus {
+                outline: none;
+                border-color: var(--secondary-color);
+            }
+
+            .contact-form textarea {
+                resize: vertical;
+                min-height: 150px;
+            }
+
+            /* Testimonials Section */
+            .testimonials {
+                background-color: var(--light-color);
+            }
+
+            .testimonials-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .testimonial-card {
+                background-color: var(--white);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: var(--box-shadow);
+                position: relative;
+            }
+
+            .testimonial-card:before {
+                content: '"';
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 4rem;
+                color: var(--light-color);
+                font-family: Georgia, serif;
+                line-height: 1;
+                z-index: 0;
+            }
+
+            .testimonial-content {
+                position: relative;
+                z-index: 1;
+                margin-bottom: 20px;
+            }
+
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+            }
+
+            .testimonial-author img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 15px;
+            }
+
+            .author-info h4 {
+                margin-bottom: 5px;
+                color: var(--primary-color);
+            }
+
+            .author-info p {
+                color: var(--text-light);
+                font-size: 0.9rem;
+            }
+
+            /* Footer */
+            footer {
+                background-color: var(--dark-color);
+                color: var(--white);
+                padding: 70px 0 0;
+                position: relative;
+            }
+
+            .footer-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 40px;
+                margin-bottom: 50px;
+            }
+
+            .footer-about {
+                grid-column: span 1;
+            }
+
+            .footer-logo {
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: var(--white);
+                display: inline-block;
+            }
+
+            .footer-logo span {
+                color: var(--secondary-color);
+            }
+
+            .footer-logo img {
+                max-height: 40px;
+            }
+
+            .footer-about p {
+                color: #bdc3c7;
+                margin-bottom: 25px;
+                line-height: 1.7;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 12px;
+            }
+
+            .social-links a {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background-color: rgb(44, 62, 80);
+                color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                font-size: 1rem;
+            }
+
+            .social-links a:hover {
+                background-color: var(--secondary-color);
+                transform: translateY(-3px);
+            }
+
+            .footer-links {
+                grid-column: span 1;
+            }
+
+            .footer-links h3 {
+                font-size: 1.3rem;
+                margin-bottom: 22px;
+                position: relative;
+                padding-bottom: 8px;
+                color: var(--white);
+            }
+
+            .footer-links h3::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 40px;
+                height: 3px;
+                background-color: var(--secondary-color);
+            }
+
+            .footer-links ul {
+                padding-left: 0;
+            }
+
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .footer-links a {
+                color: #bdc3c7;
+                transition: var(--transition);
+                display: inline-block;
+                font-size: 0.95rem;
+            }
+
+            .footer-links a:hover {
+                color: var(--secondary-color);
+                transform: translateX(5px);
+            }
+
+            .footer-contact {
+                grid-column: span 1;
+            }
+
+            .footer-contact h3 {
+                font-size: 1.3rem;
+                margin-bottom: 22px;
+                position: relative;
+                padding-bottom: 8px;
+                color: var(--white);
+            }
+
+            .footer-contact h3::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 40px;
+                height: 3px;
+                background-color: var(--secondary-color);
+            }
+
+            .contact-list {
+                padding-left: 0;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 18px;
+                line-height: 1.6;
+                font-size: 0.95rem;
+            }
+
+            .contact-item i {
+                color: var(--secondary-color);
+                margin-right: 12px;
+                margin-top: 3px;
+                font-size: 1rem;
+                min-width: 18px;
+            }
+
+            .contact-text {
+                flex: 1;
+            }
+
+            .contact-address .address-line {
+                display: block;
+            }
+
+            .footer-bottom {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 25px 0;
+                text-align: center;
+            }
+
+            .footer-bottom p {
+                margin-bottom: 10px;
+                color: #7f8c8d;
+                font-size: 0.9rem;
+            }
+
+            .dev-credits a {
+                color: var(--secondary-color);
+                transition: var(--transition);
+                text-decoration: none;
+            }
+
+            .dev-credits a:hover {
+                text-decoration: underline;
+            }
+
+            /* Responsividade do Footer */
+            @media (max-width: 992px) {
+                .footer-container {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 30px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .footer-container {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
+                .footer-about,
+                .footer-links,
+                .footer-contact {
+                    text-align: center;
+                }
+
+                .footer-links h3::after,
+                .footer-contact h3::after {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .social-links {
+                    justify-content: center;
+                }
+
+                .contact-item i {
+                    margin-right: 8px;
+                }
+
+                .logo img {
+                    max-height: 40px;
+                }
+                .footer-logo img {
+                    max-height: 30px;
+                }
+            }
+
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                }
+            }
+
+            /* Back to Top Button */
+            .back-to-top {
+                position: fixed;
+                bottom: 200px;
+                right: 30px;
+                background-color: var(--primary-color);
+                color: var(--white);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                box-shadow: var(--box-shadow);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+
+            .back-to-top.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .back-to-top:hover {
+                background-color: var(--secondary-color);
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 992px) {
+                .section {
+                    padding: 60px 0;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                    margin-bottom: 40px;
+                }
+
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .about-content {
+                    flex-direction: column;
+                }
+
+                .about-text, .about-image {
+                    flex: none;
+                    width: 100%;
+                }
+
+                .about-image {
+                    order: -1;
+                }
+                
+                .services-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 25px;
+                }
+                
+                .service-content h3 {
+                    min-height: auto;
+                    font-size: 1.4rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .nav-menu {
+                    display: none;
+                }
+
+                .hamburger {
+                    display: block;
+                }
+
+                .hero {
+                    padding: 150px 0 80px;
+                }
+
+                .hero h1 {
+                    font-size: 2rem;
+                }
+
+                .hero p {
+                    font-size: 1rem;
+                }
+
+                .hero-buttons {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .phone-box {
+                    bottom: 130px;
+                    left: 20px;
+                    padding: 10px;
+                }
+
+                .phone-icon {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 1rem;
+                }
+
+                .phone-number {
+                    font-size: 0.9rem;
+                }
+                
+                .services-grid {
+                    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                    gap: 20px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .section {
+                    padding: 50px 0;
+                }
+
+                .section-title {
+                    font-size: 1.8rem;
+                    margin-bottom: 30px;
+                }
+
+                .testimonial-card {
+                    padding: 20px;
+                }
+
+                .whatsapp-btn {
+                    right: 20px;
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1.5rem;
+                }
+
+                .back-to-top {
+                    right: 20px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1rem;
+                }
+                
+                .services-grid {
+                    grid-template-columns: 1fr;
+                    gap: 15px;
+                }
+                
+                .service-content h3 {
+                    font-size: 1.3rem;
+                    min-height: auto;
+                }
+            }
+
+            .spinner-border {
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                vertical-align: text-bottom;
+                border: 0.2em solid currentColor;
+                border-right-color: transparent;
+                border-radius: 50%;
+                animation: spinner-border .75s linear infinite;
+            }
+
+            @keyframes spinner-border {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+        <style>
+            .client-logos {
+                padding: 60px 0;
+                background: #f9f9f9;
+                overflow: hidden;
+            }
+
+            .logos-carousel {
+                width: 100%;
+                position: relative;
+                margin: 30px auto;
+            }
+
+            .logos-track {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                width: max-content;
+                animation: scroll 20s linear infinite;
+            }
+
+            .logo-item {
+                flex-shrink: 0;
+                width: 160px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                filter: grayscale(100%);
+                opacity: 0.7;
+                transition: all 0.3s ease;
+            }
+
+            .logo-item:hover {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+
+            .logo-item img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .logo-item {
+                    width: 120px;
+                    height: 60px;
+                }
+            }
+        </style>
+
         <!-- POPUP MODAL STYLES -->
         <style>
             /* Popup Modal para TRANSFEREGOV e SALICWEB */
@@ -452,7 +1563,6 @@ $menu_cor = "";
                 }
             }
         </style>
-        
     </head>
     <body>
         <!-- Popup Modal para TRANSFEREGOV e SALICWEB -->
@@ -470,7 +1580,9 @@ $menu_cor = "";
                 <div class="popup-content">
                     <div class="platforms-grid">
                         <div class="platform-card">
-                            <div class="platform-icon transferegov-icon"></div>
+                            <div class="platform-icon transferegov-icon">
+                                T
+                            </div>
                             <div class="platform-name">TRANSFEREGOV</div>
                             <div class="platform-description">
                                 Sistema completo para gestão de transferências governamentais e acompanhamento de convênios
@@ -478,7 +1590,9 @@ $menu_cor = "";
                         </div>
                         
                         <div class="platform-card">
-                            <div class="platform-icon salicweb-icon"></div>
+                            <div class="platform-icon salicweb-icon">
+                                <img src="https://image.winudf.com/v2/image/Y29tLmlvbmljZnJhbWV3b3JrLnNhbGljbW9iaWxlODA0NjAwX2ljb25feWt4NzU4bHM/icon.png" alt="" style="height: 64px width: 64px; /" />
+                            </div>
                             <div class="platform-name">SALICWEB</div>
                             <div class="platform-description">
                                 Plataforma especializada para gestão de projetos culturais e acompanhamento de recursos Lei Rouanet
@@ -503,11 +1617,12 @@ $menu_cor = "";
                 </div>
             </div>
         </div>
+
         <!-- Header -->
         <header id="header">
             <div class="header-container container">
                 <a href="#" class="logo">
-                    <img src="images/logo/logo.png" alt="M3 Soluções e Serviços" />
+                    <img src="images/logo/logo.png" alt="M3 Soluções" />
                 </a>
                 <nav class="desktop-nav">
                     <ul class="nav-menu">
@@ -528,7 +1643,7 @@ $menu_cor = "";
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-menu-header">
                 <div class="mobile-menu-logo">
-                    <img src="images/logo/logo.png" alt="M3 Soluções e Serviços" />
+                    <img src="images/logo/logo.png" alt="M3 Soluções" />
                 </div>
                 <div class="close-menu" id="closeMenu">
                     <i class="fas fa-times"></i>
@@ -572,7 +1687,7 @@ $menu_cor = "";
                         <a href="#contact" class="btn">Saiba Mais</a>
                     </div>
                     <div class="about-image">
-                        <img src="images/sobrenos/inicial.png" loading="lazy" alt="Equipe de contabilidade trabalhando">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Equipe de contabilidade trabalhando">
                     </div>
                 </div>
             </div>
@@ -583,163 +1698,137 @@ $menu_cor = "";
             <div class="container">
                 <h2 class="section-title">Nossos Serviços</h2>
                 <div class="services-grid">
-        
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/AnalisesFinanceiras.png" loading="lazy" alt="Análises Financeiras">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Análises Financeiras">
                         </div>
                         <div class="service-content">
                             <h3>Análises Financeiras</h3>
                             <p>Análises detalhadas da saúde financeira da sua empresa com relatórios personalizados e insights estratégicos.</p>
                         </div>
                     </div>
-        
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/AssessoriaAdministrativa.png" loading="lazy" alt="Assessoria Administrativa">
-                        </div>
-                        <div class="service-content">
-                            <h3>Assessoria Administrativa</h3>
-                            <p>Suporte completo para gestão administrativa da sua organização com foco em eficiência e compliance.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card" id="audcont">
-                        <div class="service-image">
-                            <img src="images/servicos/AssessoriaContabil.png" loading="lazy" alt="Assessoria Contábil">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Assessoria Contábil">
                         </div>
                         <div class="service-content">
                             <h3>Assessoria Contábil</h3>
                             <p>Orientação especializada para tomada de decisões estratégicas com base em informações contábeis precisas.</p>
                         </div>
                     </div>
-        
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/BPO-Financeiro.png" loading="lazy" alt="BPO Financeiro">
-                        </div>
-                        <div class="service-content">
-                            <h3>BPO Financeiro</h3>
-                            <p>Terceirização completa dos processos financeiros da sua empresa com equipe especializada.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/ConsultoriaContabil.png" loading="lazy" alt="Consultoria Contábil">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="Consultoria Contábil">
                         </div>
                         <div class="service-content">
                             <h3>Consultoria Contábil</h3>
                             <p>Soluções personalizadas para otimização de processos contábeis e adequação à legislação vigente.</p>
                         </div>
                     </div>
-        
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/terceiro-setor.png" loading="lazy" alt="Contabilidade Terceiro Setor">
-                        </div>
-                        <div class="service-content">
-                            <h3>Contabilidade Terceiro Setor</h3>
-                            <p>Serviços contábeis especializados para ONGs, associações e outras organizações do terceiro setor.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card" id="dp">
-                        <div class="service-image">
-                            <img src="images/servicos/DepartamentoPessoal.png" loading="lazy" alt="Departamento Pessoal">
-                        </div>
-                        <div class="service-content">
-                            <h3>Departamento Pessoal</h3>
-                            <p>Gestão completa da folha de pagamento, benefícios e obrigações trabalhistas da sua empresa.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/EmissaodeNotaFiscal.png" loading="lazy" alt="Emissão de Nota Fiscal">
-                        </div>
-                        <div class="service-content">
-                            <h3>Emissão de Nota Fiscal</h3>
-                            <p>Serviço completo de emissão e gestão de documentos fiscais eletrônicos.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/GestaoContabilEmpresarial.png" loading="lazy" alt="Gestão Contábil Empresarial">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gestão Contábil Empresarial">
                         </div>
                         <div class="service-content">
                             <h3>Gestão Contábil Empresarial</h3>
                             <p>Administração completa dos processos contábeis da sua empresa com acompanhamento personalizado.</p>
                         </div>
                     </div>
-        
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/imposto-de-renda.png" loading="lazy" alt="Imposto de Renda">
-                        </div>
-                        <div class="service-content">
-                            <h3>Imposto de Renda</h3>
-                            <p>Preparação e entrega da declaração de IRPF e IRPJ, com planejamento tributário para otimização de carga fiscal.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/intermediacao_negocio.png" loading="lazy" alt="Intermediação de Negócios">
-                        </div>
-                        <div class="service-content">
-                            <h3>Intermediação de Negócios</h3>
-                            <p>A intermediação de negócios conecta compradores e vendedores, facilitando a realização de transações comerciais.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/legalizacao-empresa.png" loading="lazy" alt="Legalização de Empresas">
-                        </div>
-                        <div class="service-content">
-                            <h3>Legalização de Empresas</h3>
-                            <p>Abertura, alteração e regularização de empresas em todos os regimes tributários.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/Legalizacao-de-Organizacoes-Religiosas.png" loading="lazy" alt="Legalização de Organizações Religiosas">
-                        </div>
-                        <div class="service-content">
-                            <h3>Legalização de Organizações Religiosas</h3>
-                            <p>Processo completo de regularização Templos Religiosos junto aos órgãos competentes</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/mei.png" loading="lazy" alt="MEI">
-                        </div>
-                        <div class="service-content">
-                            <h3>MEI</h3>
-                            <p>Abertura, regularização e assessoria completa para Microempreendedores Individuais.</p>
-                        </div>
-                    </div>
-        
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/PrestacaodeContas.png" loading="lazy" alt="Prestação de Contas">
+                            <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Prestação de Contas">
                         </div>
                         <div class="service-content">
                             <h3>Prestação de Contas</h3>
                             <p>Elaboração e organização de relatórios financeiros para prestação de contas a órgãos reguladores e investidores.</p>
                         </div>
                     </div>
-        
-                </div>
-                
-                <div class="service-grid col-12" style="margin-top:25px;">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/Coworking.png" alt="Espaço de Coworking">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Imposto de Renda">
+                        </div>
+                        <div class="service-content">
+                            <h3>Imposto de Renda</h3>
+                            <p>Preparação e entrega da declaração de IRPF e IRPJ, com planejamento tributário para otimização de carga fiscal.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Contabilidade Terceiro Setor">
+                        </div>
+                        <div class="service-content">
+                            <h3>Contabilidade Terceiro Setor</h3>
+                            <p>Serviços contábeis especializados para ONGs, associações e outras organizações do terceiro setor.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Legalização de Empresas">
+                        </div>
+                        <div class="service-content">
+                            <h3>Legalização de Empresas</h3>
+                            <p>Abertura, alteração e regularização de empresas em todos os regimes tributários.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Legalização de Organizações Religiosas">
+                        </div>
+                        <div class="service-content">
+                            <h3>Legalização de Organizações Religiosas</h3>
+                            <p>Processo completo de regularização para igrejas e Organizações Religiosas junto aos órgãos competentes.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Assessoria Administrativa">
+                        </div>
+                        <div class="service-content">
+                            <h3>Assessoria Administrativa</h3>
+                            <p>Suporte completo para gestão administrativa da sua organização com foco em eficiência e compliance.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BPO Financeiro">
+                        </div>
+                        <div class="service-content">
+                            <h3>BPO Financeiro</h3>
+                            <p>Terceirização completa dos processos financeiros da sua empresa com equipe especializada.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Emissão de Nota Fiscal">
+                        </div>
+                        <div class="service-content">
+                            <h3>Emissão de Nota Fiscal</h3>
+                            <p>Serviço completo de emissão e gestão de documentos fiscais eletrônicos.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1511&q=80" alt="MEI">
+                        </div>
+                        <div class="service-content">
+                            <h3>MEI</h3>
+                            <p>Abertura, regularização e assessoria completa para Microempreendedores Individuais.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Departamento Pessoal">
+                        </div>
+                        <div class="service-content">
+                            <h3>Departamento Pessoal</h3>
+                            <p>Gestão completa da folha de pagamento, benefícios e obrigações trabalhistas da sua empresa.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- NOVO SERVIÇO: ESPAÇO COWORKING -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Espaço de Coworking">
                         </div>
                         <div class="service-content">
                             <h3>Espaço Coworking</h3>
@@ -806,10 +1895,10 @@ $menu_cor = "";
         <!-- Parceiros Plataformas governamentais -->
         <section class="section services" id="plataformas">
             <div class="container">
-                <h2 class="section-title">Somos Especialistas nas Plataformas</h2>
+                <h2 class="section-title">Nossas Plataformas</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-image">
+                        <div class="service-image" style="max-height: 1536px;">
                             <img src="images/servicos/salic.png" alt="SALICWEB">
                         </div>
                         <div class="service-content">
@@ -946,9 +2035,10 @@ $menu_cor = "";
                         <ul>
                             <li><a href="#">Contabilidade Fiscal</a></li>
                             <li><a href="#">Contabilidade Gerencial</a></li>
-                            <li><a href="#dp">Departamento Pessoal</a></li>
-                            <li><a href="#audcont">Auditoria Contábil</a></li>
+                            <li><a href="#">Departamento Pessoal</a></li>
+                            <li><a href="#">Auditoria Contábil</a></li>
                             <li><a href="#">Consultoria Tributária</a></li>
+                            <li><a href="#">Espaço Coworking</a></li>
                         </ul>
                     </div>
                     <div class="footer-contact">
@@ -957,7 +2047,7 @@ $menu_cor = "";
                             <li class="contact-item">
                                 <div class="contact-text">
                                     <span class="contact-address">
-                                        <span class="address-line">Rua Lopo Saraiva, 179 bl 2 sl 320</span>
+                                        <span class="address-line">Rua Lopo Saraiva, 179 bloco 2 sala 320</span>
                                         <span class="address-line">Rio de Janeiro/RJ</span>
                                     </span>
                                 </div>
@@ -1332,6 +2422,7 @@ $menu_cor = "";
                 });
             });
         </script>
+
         <!-- JavaScript para o Popup de Plataformas -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
