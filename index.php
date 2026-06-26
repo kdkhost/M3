@@ -398,6 +398,16 @@ $menu_cor = "";
         
                     <div class="service-card">
                         <div class="service-image">
+                            <img src="images/servicos/GestaoContabilEmpresarial.png" loading="lazy" alt="Gestão de Projetos">
+                        </div>
+                        <div class="service-content">
+                            <h3>Gestão de projetos</h3>
+                            <p>Planejamento, execução e acompanhamento de projetos com foco em resultados e impacto</p>
+                        </div>
+                    </div>
+        
+                    <div class="service-card">
+                        <div class="service-image">
                             <img src="images/servicos/Coworking.png" loading="lazy" alt="Espaço de Coworking">
                         </div>
                         <div class="service-content">
