@@ -469,8 +469,8 @@ $menu_cor = "";
                     }
                     
                     if (!empty($clientesLogos)) {
-                        // Repetir os logos 3 vezes para garantir rolagem contínua
-                        for ($i = 0; $i < 3; $i++) {
+                        // Repetir os logos 2 vezes para garantir rolagem contínua
+                        for ($i = 0; $i < 2; $i++) {
                             foreach ($clientesLogos as $index => $logo) {
                                 $altText = 'Logo Cliente ' . ($index + 1);
                                 echo '<div class="logo-item">';
