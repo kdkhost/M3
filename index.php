@@ -398,7 +398,7 @@ $menu_cor = "";
         
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/GestaoContabilEmpresarial.png" loading="lazy" alt="Gestão de Projetos">
+                            <img src="images/servicos/GestaoDeProjetos.png" loading="lazy" alt="Gestão de Projetos">
                         </div>
                         <div class="service-content">
                             <h3>Gestão de projetos</h3>
