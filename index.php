@@ -396,18 +396,38 @@ $menu_cor = "";
                         </div>
                     </div>
         
-                </div>
-                
-                <div class="service-grid col-12" style="margin-top:25px;">
                     <div class="service-card">
                         <div class="service-image">
-                            <img src="images/servicos/Coworking.png" alt="Espaço de Coworking">
+                            <img src="images/servicos/Coworking.png" loading="lazy" alt="Espaço de Coworking">
                         </div>
                         <div class="service-content">
                             <h3>Espaço Coworking</h3>
                             <p>Escritórios compartilhados com infraestrutura completa: salas de reunião, internet de alta velocidade, café e ambiente colaborativo para profissionais e empresas.</p>
                         </div>
                     </div>
+        
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/servicos/salic.png" loading="lazy" alt="SALICWEB">
+                        </div>
+                        <div class="service-content">
+                            <h3>SALICWEB</h3>
+                            <p>gestão de projetos culturais, principalmente aqueles que utilizam a Lei Rouanet.</p>
+                        </div>
+                    </div>
+        
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/servicos/transferegov.png" loading="lazy" alt="TRANSFEREGOV">
+                        </div>
+                        <div class="service-content">
+                            <h3>TRANSFEREGOV</h3>
+                            <p>formalizar convênios, contratos de repasse e termos de fomento para obras, compras de equipamentos, projetos de saúde, educação, etc.</p>
+                            <p>Cadastro de propostas de prefeituras e estados.</p>
+                            <p>Acompanhamento da execução das obras e serviços.</p>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </section>
@@ -465,34 +485,7 @@ $menu_cor = "";
     </div>
 </section>
 
-        <!-- Parceiros Plataformas governamentais -->
-        <section class="section services" id="plataformas">
-            <div class="container">
-                <h2 class="section-title">Somos Especialistas nas Plataformas</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/salic.png" alt="SALICWEB">
-                        </div>
-                        <div class="service-content">
-                            <h3>SALICWEB</h3>
-                            <p>gestão de projetos culturais, principalmente aqueles que utilizam a Lei Rouanet.</p>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-image">
-                            <img src="images/servicos/transferegov.png" alt="TRANSFEREGOV">
-                        </div>
-                        <div class="service-content">
-                            <h3>TRANSFEREGOV</h3>
-                            <p>formalizar convênios, contratos de repasse e termos de fomento para obras, compras de equipamentos, projetos de saúde, educação, etc.</p>
-                            <p>Cadastro de propostas de prefeituras e estados.</p>
-                            <p>Acompanhamento da execução das obras e serviços.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Separador Section -->
         <div class="w-full my-10">
