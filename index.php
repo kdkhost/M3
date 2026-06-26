@@ -74,7 +74,7 @@ $menu_cor = "";
         <!-- Adicione outros tamanhos de splash screen -->
 
         <!-- Manifest -->
-        <!--<link rel="manifest" href="manifest.json">-->
+        <link rel="manifest" href="manifest.json">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
