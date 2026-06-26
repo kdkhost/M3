@@ -913,22 +913,45 @@ $menu_cor = "";
                 const pwaInstallBtn = document.getElementById('pwa-install-btn');
                 const pwaDismissBtn = document.getElementById('pwa-dismiss-btn');
 
+                // Funções para gerenciar cookies com expiração
+                function setCookie(name, value, days) {
+                    const expires = new Date();
+                    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+                    document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+                }
+
+                function getCookie(name) {
+                    const nameEQ = name + '=';
+                    const ca = document.cookie.split(';');
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                    }
+                    return null;
+                }
+
                 // Mostrar popup quando possível instalar
                 window.addEventListener('beforeinstallprompt', (e) => {
                     e.preventDefault();
                     deferredPrompt = e;
                     console.log('beforeinstallprompt disparado!');
 
-                    // Limpar localStorage para teste (temporário)
-                    localStorage.removeItem('pwaDismissed');
+                    // Verificar se o usuário já dispensou ou instalou
+                    const pwaDismissed = getCookie('pwaDismissed') || localStorage.getItem('pwaDismissed');
+                    const pwaInstalled = localStorage.getItem('pwaInstalled');
 
-                    // Mostrar popup após 5 segundos (ajustável)
-                    setTimeout(() => {
-                        if (deferredPrompt) {
-                            pwaPopup.style.display = 'flex';
-                            console.log('Popup PWA exibido!');
-                        }
-                    }, 5000);
+                    if (!pwaDismissed && !pwaInstalled) {
+                        // Mostrar popup após 5 segundos (ajustável)
+                        setTimeout(() => {
+                            if (deferredPrompt) {
+                                pwaPopup.style.display = 'flex';
+                                console.log('Popup PWA exibido!');
+                            }
+                        }, 5000);
+                    } else {
+                        console.log('Popup PWA não exibido (usuário já dispensou ou instalou)');
+                    }
                 });
 
                 // Botão de instalação
@@ -949,14 +972,19 @@ $menu_cor = "";
                 // Botão para dispensar
                 pwaDismissBtn.addEventListener('click', () => {
                     pwaPopup.style.display = 'none';
-                    // Pode adicionar localStorage para lembrar a escolha do usuário
+                    // Registrar escolha no localStorage e cookie (expira em 30 dias)
                     localStorage.setItem('pwaDismissed', 'true');
+                    setCookie('pwaDismissed', 'true', 30); // 30 dias
+                    console.log('Usuário dispensou o popup PWA');
                 });
 
                 // Verificar se já está instalado
                 window.addEventListener('appinstalled', () => {
                     console.log('Aplicativo instalado com sucesso');
                     pwaPopup.style.display = 'none';
+                    // Registrar que o app foi instalado para nunca mais mostrar o popup
+                    localStorage.setItem('pwaInstalled', 'true');
+                    setCookie('pwaInstalled', 'true', 365 * 10); // 10 anos
                 });
 
                 // Verificar modo standalone (para Safari/iOS)
